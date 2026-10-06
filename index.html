@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parking Slot Allocation System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🚗 Parking Slot Allocation System</h1>
+        <p>Smart Parking Management System</p>
+    </header>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>Total Slots</h3>
+            <p id="totalSlots">12</p>
+        </div>
+
+        <div class="card available">
+            <h3>Available</h3>
+            <p id="availableSlots">12</p>
+        </div>
+
+        <div class="card occupied">
+            <h3>Occupied</h3>
+            <p id="occupiedSlots">0</p>
+        </div>
+
+    </section>
+
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Parking Slots -->
+        <section class="parking-section">
+
+            <h2>Parking Slots</h2>
+
+            <div id="parkingGrid" class="parking-grid"></div>
+
+        </section>
+
+
+        <!-- Booking Form -->
+        <section class="booking-section">
+
+            <h2>Allocate Parking Slot</h2>
+
+            <form id="bookingForm">
+
+                <!-- Owner -->
+                <label>Owner Name</label>
+
+                <input
+                    type="text"
+                    id="ownerName"
+                    placeholder="Enter owner name"
+                    required
+                >
+
+
+                <!-- Vehicle -->
+                <label>Vehicle Number</label>
+
+                <input
+                    type="text"
+                    id="vehicleNumber"
+                    placeholder="Enter vehicle number"
+                    required
+                >
+
+
+                <!-- Parking Hours -->
+                <label>Parking Hours</label>
+
+                <input
+                    type="number"
+                    id="parkingHours"
+                    placeholder="Enter parking hours"
+                    min="1"
+                    required
+                >
+
+
+                <!-- Slot -->
+                <label>Select Slot</label>
+
+                <select id="slotSelect" required>
+
+                    <option value="">
+                        Select available slot
+                    </option>
+
+                </select>
+
+
+                <!-- Button -->
+                <button type="submit">
+                    Allocate Slot
+                </button>
+
+            </form>
+
+            <p style="margin-top: 15px;">
+                💰 Parking Rate: ₹20 per hour
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Parking Records -->
+    <section class="records">
+
+        <h2>Parking Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Slot</th>
+                    <th>Owner</th>
+                    <th>Vehicle</th>
+                    <th>Hours</th>
+                    <th>Fee</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="recordsTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

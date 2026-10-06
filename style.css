@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+}
+
+.card {
+    background: white;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.available p {
+    color: green;
+}
+
+.occupied p {
+    color: red;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.parking-section,
+.booking-section,
+.records {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.parking-section {
+    flex: 2;
+}
+
+.booking-section {
+    flex: 1;
+}
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.slot {
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.available-slot {
+    background: #dcfce7;
+    border: 2px solid #22c55e;
+    color: #166534;
+}
+
+.occupied-slot {
+    background: #fee2e2;
+    border: 2px solid #ef4444;
+    color: #991b1b;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #162d6b;
+}
+
+.records {
+    margin: 20px 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+.release-btn {
+    background: #dc2626;
+    padding: 7px 12px;
+    margin: 0;
+    width: auto;
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+
+    .dashboard {
+        flex-wrap: wrap;
+    }
+
+    .parking-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
